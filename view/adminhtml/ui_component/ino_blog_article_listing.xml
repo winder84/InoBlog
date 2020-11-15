@@ -104,5 +104,17 @@
 				</editor>
 			</settings>
 		</column>
+		<column name="description">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">description</label>
+				<editor>
+					<editorType>text</editorType>
+					<validation>
+						<rule name="required-entry" xsi:type="boolean">false</rule>
+					</validation>
+				</editor>
+			</settings>
+		</column>
 	</columns>
 </listing>

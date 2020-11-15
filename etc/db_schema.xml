@@ -5,7 +5,7 @@
 		<constraint referenceId="PRIMARY" xsi:type="primary">
 			<column name="article_id"/>
 		</constraint>
-		<column length="255" name="title" nullable="false" xsi:type="text"/>
+		<column length="255" name="title" nullable="false" xsi:type="varchar"/>
 		<column name="small_description" nullable="true" xsi:type="text"/>
 		<column name="description" nullable="true" xsi:type="text"/>
 	</table>
