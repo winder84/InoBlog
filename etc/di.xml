@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Ino\Blog\Api\ArticleRepositoryInterface" type="Ino\Blog\Model\ArticleRepository"/>
+	<preference for="Ino\Blog\Api\Data\ArticleInterface" type="Ino\Blog\Model\Data\Article"/>
+	<preference for="Ino\Blog\Api\Data\ArticleSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Ino\Blog\Model\ResourceModel\Article\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">ino_blog_article</argument>
+			<argument name="resourceModel" xsi:type="string">Ino\Blog\Model\ResourceModel\Article\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="ino_blog_article_listing_data_source" xsi:type="string">Ino\Blog\Model\ResourceModel\Article\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

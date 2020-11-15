@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Ino::top_level" module="Ino_Blog" resource="Magento_Backend::content" sortOrder="9999" title="Ino"/>
+		<add action="ino_blog/article/index" id="Ino_Blog::ino_blog_article" module="Ino_Blog" parent="Ino::top_level" resource="Magento_Backend::content" sortOrder="9999" title="Article"/>
+	</menu>
+</config>
