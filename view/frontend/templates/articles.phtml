@@ -1,0 +1,20 @@
+<?php
+/**
+ * @var $block \Ino\Blog\Block\ArticleList
+ */
+
+$data = $block->displayArticles();
+echo "<ul>";
+foreach ($data['articles'] as $article) {
+    echo "<li>";
+    echo "<h2><a href='{$article['href']}'>{$article['title']}</a></h2>";
+    if ($data['page'] == 'article') {
+        echo "<p>{$article['description']}</p>";
+    } else {
+        echo "<p>{$article['smallDescription']}</p>";
+    }
+    echo "</li>";
+}
+echo "</ul>";
+
+?>
